@@ -1,11 +1,13 @@
-#Number guess game
+#! /usr/bin.env python3
+
+#Python3 number guessing game
 
 import random
 secretnum = random.randint (1,15)                     #Selecting a random number between 1 and 15 
 print ('I am thinking of a number between 1 and 15')  #Telling the user upper limit and lower limit.
 
 for guessestaken in range (1,6):                      # Specifying number of guesses allowed
-    print ('Make a guess')
+    print ('Make a guess: ')
     guess = int(input())                              #Storing the number entered by user in a variable
 
     if guess < secretnum:
