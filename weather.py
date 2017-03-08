@@ -22,10 +22,34 @@ while True:
         a.raise_for_status()
         b=bs4.BeautifulSoup(a.content, 'html.parser')
 
-#Find all h2 tags from website and then get text value from h2[5] storing the weather alert text. 
+#Find all h2 tags from website and then get text value of h2[5] which stores weather alert text. 
         
         alert=b.find_all('h2')[5].get_text()                                   
-        print(alert)
+
+        # Find the type of alert and print the complete information
+        
+        if alert =='\nSNOWFALL WARNING IN EFFECT\n':
+            link= b.find_all('a', href=True, text='SNOWFALL WARNING IN EFFECT')
+            for links in link:
+                l= links['href']
+            url2='https://weather.gc.ca' + str(l)
+            c=requests.get(url2)
+            c.raise_for_status()
+            d=bs4.BeautifulSoup(c.content, 'html.parser')
+            statement=d.find_all('p')[1].get_text()
+            print(statement)
+        elif alert== '\nSPECIAL WEATHER STATEMENT IN EFFECT\n':
+            link= b.find_all('a', href=True, text='SPECIAL WEATHER STATEMENT IN EFFECT')
+            for links in link:
+                l= links['href']
+            url2='https://weather.gc.ca' + str(l)
+            c=requests.get(url2)
+            c.raise_for_status()
+            d=bs4.BeautifulSoup(c.content, 'html.parser')
+            statement=d.find_all('p')[1].get_text()
+            print(statement)
+        else:
+            print(alert)
 
 #Find minimum and maximum temperature divs and store them in 2 different variables
         
