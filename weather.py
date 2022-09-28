@@ -6,7 +6,7 @@ import bs4, requests
 
 #Store the city code for URL fetch as a dictionary.
 
-citycode= {'Vancouver': 74, 'Victoria': 85, 'White Rock': 62, 'Abbotsford': 81, 'Port Hardy': 89, 'Chilliwack': 24, 'Nanaimo': 20, 'Tofino': 17, 'Vernon': 35, 'Courtenay': 92, 'Sechelt': 3, 'Kamloops': 45, 'Golden': 34, 'Prince George': 79, 'Kelowna': 48, 'Lillooet': 28, 'Terrace': 80, 'Nelson': 37}
+citycode= {'Vancouver': 74, 'Victoria': 85, 'White Rock': 62, 'Abbotsford': 81, 'Port Hardy': 89, 'Chilliwack': 24, 'Nanaimo': 20, 'Tofino': 17, 'Vernon': 35, 'Courtenay': 92, 'Sechelt': 3, 'Kamloops': 45, 'Golden': 34, 'Prince George': 79, 'Kelowna': 48, 'Lillooet': 28, 'Terrace': 80, 'Nelson': 37, 'Squamish': 50, 'Whistler': 86}
 
 
 while True:
