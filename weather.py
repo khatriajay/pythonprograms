@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-#Python script to fetch weekly weather forecast for major cities in BC, Canada. 
+#Python script to fetch weekly weather forecast for major cities in British Columbia, Canada. 
 
 import bs4, requests
 
